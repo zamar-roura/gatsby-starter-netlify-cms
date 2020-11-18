@@ -5,14 +5,76 @@
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+$primary: #707070
+$primary-invert: #F8F8F8
+$body-color: #fff
+$black: #000000
+$light-grey: #F8F8F8
+$dark-grey: #707070
 
+
+
+.main-size
+  width: 562px
+  height: auto
+  margin-left: auto
+  margin-right: auto
+  color: $primary
+.navbar
+  border: 1px solid $dark-grey
 .navbar .navbar-menu
   box-shadow:none !important
+#navbar-name
+  font-weight: bold
+  font-size: 29px
+  margin-left: 10px
+  align-self: center !important
+.navbar-end
+  margin-right: 10px !important
 
+.navbar-item
+  font-weight: normal
+  margin: 0 7px 
+  color: $primary
+  font-size: 30px  
+
+.main-container
+  background-color: $light-grey
+  border: 1px solid $dark-grey
+  width: 562px
+  height: auto
+
+#recent
+  margin: 53px 42px 0 
+  font-size: 30px
+  color: $black
+
+.card
+  border: 1px solid $dark-grey
+  margin: 43px 42px
+  text-align: center
+
+.card h1
+  margin: 20px 43px 0 20px
+  font-size: 30px
+
+.card h2
+  font-size: 20px
+  margin: 0 12px 27px 12px
+
+.card-preview
+  margin: 0 60px
+  margin-bottom: 10px
+
+.card-footer
+  justify-content: space-around
+  margin: 0 43px
+  margin-top: 13.5px
+  margin-bottom: 44px
+  border-top: 2px solid black
+.tag-card img
+  vertical-align: middle
+  margin-right: 7px
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -23,6 +85,7 @@ $black: #2b2523
   flex-wrap: wrap
   justify-content: left
   align-items: center
+
   li
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
@@ -71,15 +134,8 @@ $black: #2b2523
 .margin-top-0
   margin-top: 0 !important
 
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
+
+
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
