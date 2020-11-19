@@ -13,7 +13,7 @@ export const AboutPageTemplate = ({content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <PageContent className="content" content={content} />
+              <PageContent className="content font-black" content={content} />
             </div>
           </div>
         </div>
