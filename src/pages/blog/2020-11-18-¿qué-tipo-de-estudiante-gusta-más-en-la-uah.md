@@ -4,7 +4,6 @@ title: ¿Qué tipo de estudiante gusta más en la UAH?
 date: 2020-11-18T20:49:49.757Z
 description: Análisis de datos obtenidos en la cuenta TINDER de la UAH en INSTAGRAM
 featuredpost: true
-featuredimage: /img/blog-index.jpg
 tags:
   - data-mining
   - python

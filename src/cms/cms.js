@@ -7,7 +7,6 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
-
-CMS.registerPreviewTemplate('index', IndexPagePreview)
+ 
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
