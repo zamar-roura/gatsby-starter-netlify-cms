@@ -20,9 +20,7 @@ export const BlogPostTemplate = ({
     <section className="section">
       {helmet || ''}
       <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className="title has-text-weight-bold is-bold-light">
               {title}
             </h1>
             <h2> <p>{description}</p> </h2>
@@ -39,8 +37,6 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-          </div>
-        </div>
       </div>
     </section>
   )
@@ -93,7 +89,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MM - YYYY")
         title
         description
         tags

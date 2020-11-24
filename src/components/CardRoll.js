@@ -63,7 +63,7 @@ export default () => (
                 templateKey
                 tags
                 readtime
-                date(formatString: "mm - yyyy")
+                date(formatString: "MM - yyyy")
                 featuredpost
               }
             }

@@ -12,7 +12,7 @@ export const AboutPageTemplate = ({content, contentComponent }) => {
       <PageContent   className="content font-black" content={content} />
     </div>
   )
-}
+} 
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
@@ -35,12 +35,12 @@ const AboutPage = ({ data }) => {
 }
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,  
 }
 
-export default AboutPage
-
-export const aboutPageQuery = graphql`
+export default AboutPage 
+  
+export const aboutPageQuery = graphql` 
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html

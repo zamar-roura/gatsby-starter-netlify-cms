@@ -2,8 +2,6 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
 
 $primary: #707070
 $primary-invert: #F8F8F8
@@ -12,24 +10,41 @@ $black: #000000
 $light-grey: #F8F8F8
 $dark-grey: #707070
 
+$main-width: 562px
+$main-font-size: 30px
+$main-font-size-2: 20px
+$main-margin: 43px
+$responsive-width: 100%
+$responsive-font-size: 15px
+$responsive-font-size-2: 10px
+$responsive-margin: 20px
+=responsive($property)
+   @media ( max-width: $property ) 
+        @content
+    
 
 .font-black
   color: $black !important
 .main-size
-  width: 562px
+  width: $main-width
   height: auto
   margin-left: auto
   margin-right: auto
   color: $primary
+  +responsive($main-width)
+    width: $responsive-width
+
 .navbar
   border: 1px solid $dark-grey
 .navbar .navbar-menu
   box-shadow:none !important
 #navbar-name
   font-weight: bold
-  font-size: 29px
+  font-size: $main-font-size
   margin-left: 10px
   align-self: center !important
+  +responsive($main-width)
+   font-size: $responsive-font-size
 .navbar-end
   margin-right: 10px !important
 
@@ -37,47 +52,69 @@ $dark-grey: #707070
   font-weight: normal
   margin: 0 7px
   color: $primary
-  font-size: 30px
+  font-size: $main-font-size 
+
+  +responsive($main-width)
+   font-size: $responsive-font-size
+   margin: 0 2px 
 
 .main-container
   background-color: $light-grey
   border: 1px solid $dark-grey
-  width: 562px
   height: auto
-
-#recent
-  margin: 53px 42px 0
-  font-size: 30px
-  color: $black
 
 #padding-card
   padding: 10px
+  +responsive($main-width)
+    padding: 5px
+
+#recent
+  margin: 53px 42px 0 
+  font-size: $main-font-size
+  color: $black
+  +responsive($main-width)
+      margin: 20px 19px 0 
+      font-size: $responsive-font-size
 .card
   border: 1px solid $dark-grey
-  margin: 43px 42px
+  margin: $main-margin ($main-margin - 1)
   text-align: center
-
+  +responsive($main-width)
+      font-size: $responsive-font-size
+      margin: $responsive-margin ($responsive-margin - 1)
 .card h1
-  margin: 20px 43px 0 20px
-  font-size: 30px
-
+  margin: 20px $main-margin 0 20px
+  font-size: $main-font-size
+  +responsive($main-width)
+    font-size: $responsive-font-size
+    margin: 10px $responsive-margin 0 10px
 .card h2
-  font-size: 20px
+  font-size: $main-font-size-2
   margin: 0 12px 27px 12px
+  +responsive($main-width)
+    font-size: $responsive-font-size-2
 
 .card-preview
   margin: 0 60px
   margin-bottom: 10px
-
+  +responsive($main-width)
+    margin: 0 30px
+    margin-bottom: 5px
 .card-footer
   justify-content: space-around
-  margin: 0 43px
+  margin: 0 $main-margin
   margin-top: 13.5px
   margin-bottom: 44px
   border-top: 2px solid black
+  +responsive($main-width)
+    margin: 0 $responsive-margin
+    margin-top: 7px
+    margin-bottom: 22px
 .tag-card img
   vertical-align: middle
   margin-right: 7px
+  +responsive($main-width)
+    margin-right: 3px
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -93,8 +130,18 @@ $dark-grey: #707070
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
+  
+h1
+  +responsive($main-width)
+    font-size: 1.5rem !important
+h2
+  font-size: 1rem !important
+  +responsive($main-width)
+    font-size: 0.8rem !important 
 h5
   font-size: 15px !important
+  +responsive($main-width)
+    font-size: 8px !important
 // Helper Classes
 .full-width-image-container
   width: 100vw
@@ -148,9 +195,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $primary-invert
+$menu-item-active-background-color:	$primary-invert
+$menu-list-border-left: 1px solid $primary-invert
 $menu-label-color: $white-ter
 
 
