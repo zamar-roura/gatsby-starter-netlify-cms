@@ -7,7 +7,10 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-111730482-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+if (typeof window != "undefined"){
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
