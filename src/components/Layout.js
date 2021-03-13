@@ -5,7 +5,9 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
-
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-111730482-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
@@ -52,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
         <Navbar/>
         <div className="main-container">{children}</div>
       </div>
-      
+
       {/* <Footer /> */}
     </div>
   )
